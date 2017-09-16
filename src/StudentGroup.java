@@ -26,12 +26,17 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getStudents() {
 		// Add your implementation here
+                 if(length==0)
+                throw new IllegalArgumentException("Invalid operation");
+else return student[0];
 		return null;
 	}
 
 	@Override
 	public void setStudents(Student[] students) {
 		// Add your implementation here
+            if()
+
 	}
 
 	@Override
@@ -88,7 +93,7 @@ public class StudentGroup implements StudentArrayOperation {
           }
           else
            {
-            student = ArrayUtils.remove(student, index);
+            students = ArrayUtils.remove(students, index);
            }
         }
         catch(IllegalArgumentException ie1)
@@ -143,7 +148,7 @@ public class StudentGroup implements StudentArrayOperation {
 		// Add your implementation here
 		try
 		{int flag=0;
-			for(i=0;i<student.length();i++)
+			for(i=0;i<students.length();i++)
 			{
 				if(this.id==student.id)
 				{ flag=1;	students = ArrayUtils.remove(students, id);}
@@ -206,9 +211,9 @@ public class StudentGroup implements StudentArrayOperation {
                  {
                   for(j=0;j<n-i-1;j++)
                    {
-                       if(Student[i].id>Student[j].id)
+                       if(Student[j].id>Student[j+1].id)
                          {
-                             t=Student[i];Student[i]=Student[j];Student[j]=t;
+                             t=Student[j];Student[j]=Student[j+1];Student[j+1]=t;
                          }
                     }
                  }
