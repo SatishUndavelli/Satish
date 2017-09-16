@@ -35,13 +35,23 @@ else return student[0];
 	@Override
 	public void setStudents(Student[] students) {
 		// Add your implementation here
-            if()
-
+            if(students[index]==null)
+		throw new IllegalArgumentException("Invalid operation");
+            else if(index<0||index>students.length())
+                   throw new IllegalArgumentException("Invalid length");
+            else
+			students[index]=student;
 	}
 
 	@Override
 	public Student getStudent(int index) {
 		// Add your implementation here
+if(students[index]==null)
+		throw new IllegalArgumentException("Invalid operation");
+            else if(index<0||index>students.length())
+                   throw new IllegalArgumentException("Invalid length");
+            else
+			students[index]=student;
 		return null;
 	}
 
@@ -49,7 +59,12 @@ else return student[0];
 	public void setStudent(Student student, int index) {
 		// Add your implementation here
          
-             
+             if(students[index]==null)
+		throw new IllegalArgumentException("Invalid operation");
+            else if(index<0||index>students.length())
+                   throw new IllegalArgumentException("Invalid length");
+            else
+			students[index]=student;
         
 		
 	}
